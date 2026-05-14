@@ -5,7 +5,7 @@ import numpy as np
 import ta
 import plotly.graph_objects as go
 from datetime import datetime
-
+import time
 # --- INSTITUTIONAL CONFIG ---
 st.set_page_config(page_title="ALPHA TERMINAL | NIFTY 50", layout="wide")
 
@@ -67,3 +67,6 @@ if data_bundle is not None:
     st.plotly_chart(fig, use_container_width=True)
 else:
     st.error("Market Data API Lag Detected. Refreshing...")
+st.caption("⏳ Desk auto-refreshing in 60 seconds to prevent API throttling...")
+time.sleep(60)
+st.rerun()
