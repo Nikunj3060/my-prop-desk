@@ -14,7 +14,7 @@ st.markdown("""
     .reportview-container { background: #0e1117; }
     .stMetric { background: #1a1c23; border-radius: 10px; padding: 15px; border: 1px solid #2e3139; }
     </style>
-    """, unsafe_content_as_html=True)
+    """, unsafe_allow_html=True)
 
 class JanesStreetEngine:
     def __init__(self, ticker="^NSEI"):
