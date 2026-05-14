@@ -19,7 +19,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 class QuantOptionsEngine:
-    def __init__(self, ticker="^NSEI"):
+    def __init__(self, ticker="SPY"):
         self.ticker_sym = ticker
         self.data = yf.Ticker(ticker)
         self.risk_free_rate = 0.07 # 7% India Risk-Free Rate Proxy
